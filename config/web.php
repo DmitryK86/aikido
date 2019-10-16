@@ -64,6 +64,7 @@ $config = [
 
                 'contact' => 'site/contact',
                 'coach' => 'site/coach',
+                'captcha' => 'site/captcha',
                 '<controller:\w+>/<slug:[\w-]+>' => '<controller>/view',
                 '<controller:\w+>' => '<controller>/index',
             ],
