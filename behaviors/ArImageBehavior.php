@@ -70,7 +70,7 @@ class ArImageBehavior extends ImageUploadBehavior
             return $emptyUrl;
         }
 
-        return $this->getUploadedFileUrl($attribute);
+        return $this->resolvePath($this->fileUrl);
     }
 
     public function getImageSrc($emptyUrl = ImageHelper::EMPTY_IMG_SRC){
