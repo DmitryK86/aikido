@@ -32,7 +32,7 @@ use yii\helpers\Url;
                             </a>
                         </h4>
                         <ul class="blog-details-preview">
-                            <li><i class="icon-calendar"></i><strong>Коли творена:</strong> <?= date('d/m/Y', strtotime($item->created_at));?><li>
+                            <li><i class="icon-calendar"></i><strong>Коли створена:</strong> <?= date('d/m/Y', strtotime($item->created_at));?><li>
                             <li><i class="icon-user"></i><strong>Ким створена:</strong> <a href="#" title="Link">Адміністратор</a><li>
                         </ul>
                     </div>

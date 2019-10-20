@@ -31,14 +31,18 @@ use kartik\widgets\SwitchInput;
         ],
     ]); ?>
 
+    <?= $form->field($model, 'place')->textInput(['maxlength' => true]) ?>
+
     <?= $form->field($model, 'date')->widget(DateTimePicker::className())?>
+
+    <?= $form->field($model, 'period')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'enabled')->widget(SwitchInput::classname(), []); ?>
 
     <?= $form->field($model, 'image')->fileInput() ?>
 
     <div class="form-group">
-        <?= Html::submitButton(Yii::t('app', 'Save'), ['class' => 'btn btn-success']) ?>
+        <?= Html::submitButton(Yii::t('app', 'Зберегти'), ['class' => 'btn btn-success']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>

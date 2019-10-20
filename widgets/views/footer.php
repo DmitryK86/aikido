@@ -28,6 +28,10 @@
                 </ul>
             </div>
             <div class="span3 footer-col">
+                <h5 style="margin-bottom: -10px;">Телефони:</h5><br>
+                <?php foreach (Yii::$app->params['phones'] as $phone):?>
+                    <?= $phone;?><br>
+                <?php endforeach;?>
                 <h5>Розклад тренувань:</h5>
                 <ul>
                     <?php foreach (Yii::$app->params['schedule'] as $days => $times): ?>

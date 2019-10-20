@@ -16,7 +16,6 @@ $this->params['breadcrumbs'][] = $this->title;
         <div class="span3">
             <img src="<?= $event->getImageSrc();?>" alt="image">
             <h5><?= $event->title;?></h5>
-            <p><?= StringHelper::truncate($event->description, 120) ?></p>
             <a href="<?= \yii\helpers\Url::to(['/events/view', 'slug' => $event->slug])?>" class="btn btn-small btn-inverse" type="button">Більше інформації</a>
         </div>
     <?php endforeach;?>

@@ -23,6 +23,6 @@ class EventsController extends Controller
             throw new HttpException(404, 'Not found');
         }
 
-        return $this->render('view', ['model' => $event]);
+        return $this->render('view', ['event' => $event]);
     }
 }

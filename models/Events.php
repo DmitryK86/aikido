@@ -17,6 +17,8 @@ use yiidreamteam\upload\ImageUploadBehavior;
  * @property string $description
  * @property string $date
  * @property int $enabled
+ * @property string $place
+ * @property string $period
  * @property string $image
  */
 class Events extends \yii\db\ActiveRecord
@@ -54,7 +56,7 @@ class Events extends \yii\db\ActiveRecord
             [['description'], 'string'],
             [['date'], 'safe'],
             [['enabled'], 'integer'],
-            [['slug', 'title'], 'string', 'max' => 255],
+            [['slug', 'title', 'place', 'period'], 'string', 'max' => 255],
             [['slug'], 'unique'],
             ['image', 'file', 'extensions' => 'jpeg, gif, png, jpg'],
         ];
@@ -72,6 +74,8 @@ class Events extends \yii\db\ActiveRecord
             'date' => Yii::t('app','Час початку'),
             'enabled' => Yii::t('app','Ввімкнена'),
             'image' => Yii::t('app','Картинка'),
+            'place' => Yii::t('app', 'Місце проведення'),
+            'period' => Yii::t('app', 'Тривалість заходу'),
         ];
     }
 }

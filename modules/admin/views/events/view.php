@@ -32,7 +32,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'attributes' => [
             'slug',
             'title',
-            'description:ntext',
+            'description:html',
             'date',
             [
                 'attribute' => 'enabled',
