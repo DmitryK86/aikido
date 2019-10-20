@@ -4,7 +4,7 @@
  * @var \app\models\Articles $articles
  */
 
-use yii\helpers\Url;
+use app\widgets\Article;
 
 $this->title = 'Статті';
 $this->params['breadcrumbs'][] = $this->title;
@@ -18,7 +18,7 @@ $this->params['breadcrumbs'][] = $this->title;
             <ul class="gallery-post-grid holder">
 
                 <?php foreach ($articles as $article):?>
-                   <?= \app\widgets\Article::widget(['article' => $article]);?>
+                   <?= Article::widget(['article' => $article]);?>
                 <?php endforeach;?>
 
             </ul>
