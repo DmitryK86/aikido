@@ -22,6 +22,8 @@ use kartik\widgets\DateTimePicker;
 
     <?= $form->field($model, 'created_at')->widget(DateTimePicker::className()) ?>
 
+    <?= $form->field($model, 'image')->fileInput() ?>
+
     <?= $form->field($model, 'enabled')->widget(SwitchInput::classname(), []) ?>
 
     <div class="form-group">

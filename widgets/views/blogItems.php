@@ -20,8 +20,8 @@ use yii\helpers\Url;
         <!-- Carousel items -->
         <div class="carousel-inner">
 
-            <?php foreach ($items as $item):?>
-                <div class="active item">
+            <?php foreach ($items as $i => $item):?>
+                <div class="item <?= $i === 0 ? 'active' : null;?>">
                     <a href="<?= Url::to(['/blog/view', 'slug' => $item->slug])?>">
                         <img src="<?= $item->getImageSrc();?>" alt="" class="align-left blog-thumb-preview max-height-220" />
                     </a>
