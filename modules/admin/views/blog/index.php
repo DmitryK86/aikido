@@ -18,19 +18,20 @@ $this->params['breadcrumbs'][] = $this->title;
         <?= Html::a(Yii::t('app', 'Створити запис у блозі'), ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
+        'rowOptions' => function($model){
+            if(!$model->enabled){
+                return ['class' => 'bg-danger'];
+            }
+        },
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
-
-            'id',
             'slug',
             'title',
             'created_at',
-            //'enabled',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

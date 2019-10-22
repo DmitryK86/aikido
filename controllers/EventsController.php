@@ -18,7 +18,7 @@ class EventsController extends Controller
     }
 
     public function actionView($slug){
-        $event = Events::findOne(['slug' => $slug]);
+        $event = Events::findOne(['slug' => $slug, 'enabled' => true]);
         if (!$event){
             throw new HttpException(404, 'Not found');
         }

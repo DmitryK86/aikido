@@ -39,7 +39,7 @@ $isPastEvent = $dateAsTime < time();
                     <li><h6>Місце проведення:</h6><?= $event->place;?></li>
                 </ul>
 
-                <?php if (!$isPastEvent):?>
+                <?php if (!$isPastEvent && false):?>
                 <button class="btn btn-inverse pull-left" type="button">
                     Прийняти участь
                 </button>
