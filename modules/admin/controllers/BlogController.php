@@ -6,6 +6,7 @@ use Yii;
 use app\models\BlogItems;
 use app\modules\admin\models\BlogItemsSearch;
 use app\modules\admin\components\AdminBaseController;
+use yii\helpers\ArrayHelper;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
@@ -19,14 +20,14 @@ class BlogController extends AdminBaseController
      */
     public function behaviors()
     {
-        return [
+        return ArrayHelper::merge([
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
                     'delete' => ['POST'],
                 ],
             ],
-        ];
+        ], parent::behaviors());
     }
 
     /**

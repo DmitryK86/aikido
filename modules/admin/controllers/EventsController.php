@@ -6,6 +6,7 @@ use Yii;
 use app\models\Events;
 use app\modules\admin\models\EventsSearch;
 use app\modules\admin\components\AdminBaseController;
+use yii\helpers\ArrayHelper;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
@@ -19,14 +20,14 @@ class EventsController extends AdminBaseController
      */
     public function behaviors()
     {
-        return [
+        return ArrayHelper::merge([
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
                     'delete' => ['POST'],
                 ],
             ],
-        ];
+        ], parent::behaviors());
     }
 
     /**

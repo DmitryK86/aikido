@@ -79,4 +79,13 @@ class LoginForm extends Model
 
         return $this->_user;
     }
+
+    public function attributeLabels()
+    {
+        return [
+            'username' => Yii::t('app', 'Логін'),
+            'password' => Yii::t('app', 'Пароль'),
+            'rememberMe' => Yii::t('app', 'Запам\'ятати мене'),
+        ];
+    }
 }

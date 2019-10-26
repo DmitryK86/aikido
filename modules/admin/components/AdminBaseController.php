@@ -25,7 +25,7 @@ class AdminBaseController extends Controller
                     ],
                     [
                         'allow' => false,
-                        'roles' => ['?'],
+                        'roles' => ['?']
                     ],
                 ],
             ],
