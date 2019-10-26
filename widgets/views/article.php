@@ -17,6 +17,6 @@ use yii\helpers\StringHelper;
         <a href="<?= Url::to(['/articles/view', 'slug' => $article->slug]); ?>">
            <?= $article->title; ?>
         </a>
-        <?= StringHelper::truncate($article->subtitle,120); ?>
+        <?= StringHelper::truncate($article->subtitle,115); ?>
     </span>
 </li>
