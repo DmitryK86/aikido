@@ -16,3 +16,9 @@
 .max-height-220{
     max-height: 220px;
 }
+
+.blog-item-img {
+    max-height: 300px;
+    display: block;
+    margin: 0 auto;
+}

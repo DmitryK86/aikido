@@ -22,7 +22,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <article>
             <h3 class="title-bg"><?= $blogItem->title;?></h3>
             <div class="post-content">
-                <a href="#"><img src="<?= $blogItem->getImageSrc();?>" alt="image" style="max-height: 250px"></a>
+                <a href="#"><img src="<?= $blogItem->getImageSrc();?>" alt="image" class="blog-item-img"></a>
 
                 <div class="post-body">
                     <?= $blogItem->text;?>
