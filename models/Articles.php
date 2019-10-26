@@ -17,6 +17,7 @@ use yii\db\Expression;
  * @property string $text
  * @property string $created_at
  * @property int $enabled
+ * @property string $published_at
  */
 class Articles extends \yii\db\ActiveRecord
 {
@@ -36,7 +37,7 @@ class Articles extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['title', 'slug'], 'required'],
+            [['title', 'slug', 'published_at'], 'required'],
             [['slug'], 'unique'],
             [['text', 'subtitle'], 'string'],
             [['created_at'], 'safe'],
@@ -59,6 +60,7 @@ class Articles extends \yii\db\ActiveRecord
             'text' => 'Текст',
             'created_at' => 'Створена',
             'enabled' => 'Ввімкнена',
+            'published_at' => 'Опублікована'
         ];
     }
 

@@ -33,7 +33,10 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        $articles = Articles::find()->where(['enabled' => true])->orderBy('created_at DESC')->limit(3)->all();
+        $articles = Articles::find()
+            ->where(['enabled' => true])
+            ->andWhere('published_at <= NOW()')
+            ->orderBy('published_at DESC')->limit(3)->all();
 
         return $this->render('index', ['articles' => $articles]);
     }

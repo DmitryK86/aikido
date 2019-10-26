@@ -4,6 +4,7 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use mihaildev\ckeditor\CKEditor;
 use kartik\widgets\SwitchInput;
+use kartik\date\DatePicker;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Articles */
@@ -26,6 +27,8 @@ use kartik\widgets\SwitchInput;
             'inline' => false,
         ],
     ]); ?>
+
+    <?= $form->field($model, 'published_at')->widget(\kartik\widgets\DateTimePicker::className())?>
 
     <?= $form->field($model, 'enabled')->widget(SwitchInput::classname(), []) ?>
 

@@ -34,6 +34,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'title',
             'text:html',
             'created_at',
+            'published_at',
             [
                 'attribute' => 'enabled',
                 'value' => function(\app\models\Articles $model){

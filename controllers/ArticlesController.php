@@ -9,7 +9,10 @@ use yii\web\HttpException;
 class ArticlesController extends Controller
 {
     public function actionIndex(){
-        $articles = Articles::find()->where(['enabled' => true])->orderBy('created_at DESC')->all();
+        $articles = Articles::find()
+            ->where(['enabled' => true])
+            ->andWhere('published_at <= NOW()')
+            ->orderBy('published_at DESC')->all();
         return $this->render('index', ['articles' => $articles]);
     }
 
