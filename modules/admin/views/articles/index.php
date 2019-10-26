@@ -3,6 +3,7 @@
 use yii\helpers\Html;
 use yii\grid\GridView;
 use yii\widgets\Pjax;
+
 /* @var $this yii\web\View */
 /* @var $searchModel app\modules\admin\models\ArticlesSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
@@ -28,13 +29,26 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
 
             'title',
-            'created_at',
+            'published_at',
             [
-                    'attribute' => 'enabled',
-                    'value' => function(\app\models\Articles $model){
-                        return $model->enabled ? 'Так' : 'Ні';
-                    },
-                    'filter' => ['Ні', 'Так'],
+                'format' => 'html',
+                'attribute' => 'enabled',
+                'value' => function (\app\models\Articles $model) {
+                    return $model->enabled
+                        ? '<span class="label label-success">Так</span>'
+                        : '<span class="label label-danger">Ні</span>';
+                },
+                'filter' => ['Ні', 'Так'],
+            ],
+            [
+                'format' => 'html',
+                'attribute' => 'is_main',
+                'value' => function (\app\models\Articles $model) {
+                    return $model->enabled
+                        ? '<span class="label label-success">Так</span>'
+                        : '<span class="label label-danger">Ні</span>';
+                },
+                'filter' => ['Ні', 'Так'],
             ],
 
             ['class' => 'yii\grid\ActionColumn'],

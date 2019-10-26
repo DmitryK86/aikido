@@ -17,8 +17,8 @@ class ArticlesSearch extends Articles
     public function rules()
     {
         return [
-            [['id', 'enabled'], 'integer'],
-            [['title', 'text', 'created_at'], 'safe'],
+            [['id', 'enabled', 'is_main'], 'integer'],
+            [['title', 'text', 'published_at'], 'safe'],
         ];
     }
 
@@ -59,8 +59,9 @@ class ArticlesSearch extends Articles
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
-            'created_at' => $this->created_at,
+            'published_at' => $this->published_at,
             'enabled' => $this->enabled,
+            'is_main' => $this->is_main,
         ]);
 
         $query->andFilterWhere(['like', 'title', $this->title])
