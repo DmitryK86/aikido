@@ -20,3 +20,9 @@ use yii\helpers\StringHelper;
         <?= StringHelper::truncate($article->subtitle,115); ?>
     </span>
 </li>
+
+<style>
+    .project-details{
+        max-height: 79px;
+    }
+</style>

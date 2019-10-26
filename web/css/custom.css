@@ -11,6 +11,9 @@
     .coach-row{
         flex-direction: column;
     }
+    .project-details{
+        max-height: none;
+    }
 }
 
 .max-height-220{
