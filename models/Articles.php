@@ -18,6 +18,7 @@ use yii\db\Expression;
  * @property string $created_at
  * @property int $enabled
  * @property string $published_at
+ * @property boolean $is_main
  */
 class Articles extends \yii\db\ActiveRecord
 {
@@ -42,6 +43,7 @@ class Articles extends \yii\db\ActiveRecord
             [['text', 'subtitle'], 'string'],
             [['created_at'], 'safe'],
             [['enabled'], 'integer'],
+            [['is_main'], 'integer'],
             [['title'], 'string', 'max' => 255],
             [['image'], 'file', 'extensions' => 'jpeg, gif, png, jpg'],
         ];
@@ -60,7 +62,8 @@ class Articles extends \yii\db\ActiveRecord
             'text' => 'Текст',
             'created_at' => 'Створена',
             'enabled' => 'Ввімкнена',
-            'published_at' => 'Опублікована'
+            'published_at' => 'Опублікована',
+            'is_main' => 'Головна (відображається на головній сторінці)'
         ];
     }
 

@@ -32,6 +32,8 @@ use kartik\date\DatePicker;
 
     <?= $form->field($model, 'enabled')->widget(SwitchInput::classname(), []) ?>
 
+    <?= $form->field($model, 'is_main')->widget(SwitchInput::classname(), []) ?>
+
     <?= $form->field($model, 'image')->fileInput() ?>
 
     <div class="form-group">
