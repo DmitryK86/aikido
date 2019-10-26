@@ -32,6 +32,13 @@ $this->params['breadcrumbs'][] = $this->title;
             'slug',
             'title',
             'created_at',
+            [
+                'attribute' => 'enabled',
+                'value' => function($data){
+                    return $data->enabled ? 'Так' : 'Ні';
+                },
+                'filter' => [1 => 'Так', 0 => 'Ні'],
+            ],
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

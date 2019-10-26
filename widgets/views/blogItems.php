@@ -11,8 +11,10 @@ use yii\helpers\Url;
 
     <h5 class="title-bg">Блог
         <small>останні публікації</small>
-        <button id="btn-blog-next" class="btn btn-inverse btn-mini" type="button">&raquo;</button>
-        <button id="btn-blog-prev" class="btn btn-inverse btn-mini" type="button">&laquo;</button>
+        <?php if (count($items) > 1):?>
+            <button id="btn-blog-next" class="btn btn-inverse btn-mini" type="button">&raquo;</button>
+            <button id="btn-blog-prev" class="btn btn-inverse btn-mini" type="button">&laquo;</button>
+        <?php endif;?>
     </h5>
 
     <div id="blogCarousel" class="carousel slide ">
