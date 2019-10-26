@@ -11,8 +11,8 @@
     .coach-row{
         flex-direction: column;
     }
-    .project-details{
-        max-height: none;
+    img {
+        max-height: 209px;
     }
 }
 

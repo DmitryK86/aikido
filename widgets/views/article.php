@@ -22,7 +22,12 @@ use yii\helpers\StringHelper;
 </li>
 
 <style>
-    .project-details{
-        max-height: 79px;
+    img {
+        max-height: 209px;
+    }
+    @media (max-width: 767px) {
+        img {
+            max-height: none;
+        }
     }
 </style>
