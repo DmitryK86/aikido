@@ -9,7 +9,7 @@ $(document).ready(function () {
             button.on('click', null, function (e) {
                 e.preventDefault();
                 e.stopPropagation();
-                jQuery.ajax('/admin/admin/slug', {
+                jQuery.ajax('/admin/admin/slug/', {
                     data: {str: slug.val()}
                 }).done(function (data) {
                     var res = data.replace(/"/g, '');
