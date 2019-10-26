@@ -13,7 +13,7 @@ use \yii\bootstrap\Nav;
     ================================================== -->
     <div class="span5 logo">
         <a href="<?= Url::home();?>"><img src="/img/logo-black.png" alt="Ki-Aikido logo" /></a>
-        <h5> 心身統一合氣道 </h5>
+        <h5 title="Ki-Айкідо розуму та тіла"> 心身統一合氣道 </h5>
     </div>
 
     <div class="span7 navigation">
