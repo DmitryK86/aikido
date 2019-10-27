@@ -11,9 +11,14 @@
     .coach-row{
         flex-direction: column;
     }
-    img {
-        max-height: 209px;
+    .my-article-image {
+        max-height: none;
     }
+
+}
+
+.my-article-image {
+    max-height: 209px;
 }
 
 .max-height-220{
