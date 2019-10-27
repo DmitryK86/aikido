@@ -44,7 +44,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'format' => 'html',
                 'attribute' => 'is_main',
                 'value' => function (\app\models\Articles $model) {
-                    return $model->enabled
+                    return $model->is_main
                         ? '<span class="label label-success">Так</span>'
                         : '<span class="label label-danger">Ні</span>';
                 },
