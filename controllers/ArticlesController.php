@@ -18,7 +18,7 @@ class ArticlesController extends Controller
 
     public function actionView($slug)
     {
-        $model = Articles::findOne(['slug' => $slug]);
+        $model = Articles::find()->where(['slug' => $slug, 'enabled' => true])->andWhere('published_at <= NOW()')->one();
         if (!$model){
             throw new HttpException(404, 'Not found');
         }
