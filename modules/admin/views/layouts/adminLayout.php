@@ -44,7 +44,15 @@ use \kartik\widgets\SideNav;
                             'icon' => 'picture',
                             'items' => [
                                 ['label' => Yii::t('app', 'Дивитися'), 'url' => Url::to(['/admin/gallery/index'])],
-                                ['label' => Yii::t('app', 'Створити'), 'url' => Url::to(['/admin/gallery/crete'])],
+                                ['label' => Yii::t('app', 'Створити'), 'url' => Url::to(['/admin/gallery/create'])],
+                            ],
+                        ],
+                        [
+                            'label' => 'Redirects',
+                            'icon' => 'random',
+                            'items' => [
+                                ['label' => Yii::t('app', 'Дивитися'), 'url' => Url::to(['/admin/redirect-routes/index'])],
+                                ['label' => Yii::t('app', 'Створити'), 'url' => Url::to(['/admin/redirect-routes/create'])],
                             ],
                         ],
                     ]

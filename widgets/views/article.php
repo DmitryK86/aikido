@@ -6,7 +6,6 @@
 
 use \yii\helpers\Url;
 use yii\helpers\StringHelper;
-
 ?>
 
 <li class="span4 gallery-item">

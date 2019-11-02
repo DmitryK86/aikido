@@ -5,7 +5,7 @@
 
 use yii\helpers\Url;
 
-$this->title = Yii::$app->params['appName'];
+$this->title = Yii::t('app', 'Головна');
 ?>
 
 <div class="row headline"><!-- Begin Headline -->
