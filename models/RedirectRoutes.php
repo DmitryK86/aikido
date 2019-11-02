@@ -32,7 +32,6 @@ class RedirectRoutes extends \yii\db\ActiveRecord
             [['enabled'], 'integer'],
             [['from_route', 'to_route'], 'string', 'max' => 255],
             [['from_route'], 'unique'],
-            [['to_route'], 'unique'],
         ];
     }
 
@@ -52,7 +51,9 @@ class RedirectRoutes extends \yii\db\ActiveRecord
     public function beforeSave($insert)
     {
         $this->from_route = sprintf('/%s/', trim($this->from_route, '/'));
-        $this->to_route = sprintf('/%s/', trim($this->to_route, '/'));
+        if ($this->to_route != '/'){
+            $this->to_route = sprintf('/%s/', trim($this->to_route, '/'));
+        }
 
         return parent::beforeSave($insert);
     }
