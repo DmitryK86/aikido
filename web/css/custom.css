@@ -7,18 +7,8 @@
     margin-right: 30px;
 }
 
-@media (max-width: 767px) {
-    .coach-row{
-        flex-direction: column;
-    }
-    .my-article-image {
-        max-height: none;
-    }
-
-}
-
 .my-article-image {
-    max-height: 209px;
+    height: 209px;
 }
 
 .max-height-220{
@@ -29,4 +19,17 @@
     max-height: 300px;
     display: block;
     margin: 0 auto;
+}
+
+@media (max-width: 767px) {
+    .coach-row{
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 979px) {
+    .my-article-image {
+        height: auto;
+    }
+
 }
