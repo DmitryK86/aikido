@@ -143,5 +143,8 @@ class ArImageBehavior extends ImageUploadBehavior
         return $this->_image;
     }
 
-
+    public function beforeDelete()
+    {
+        //TODO implement delete data from image table
+    }
 }

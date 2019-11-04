@@ -27,11 +27,11 @@ class Header extends Widget
                 'url' => ['/events'],
                 'active' => self::checkIsActive('events'),
             ],
-//            [
-//                'label' => 'Галерея',
-//                'url' => ['/gallery'],
-//                'active' => self::checkIsActive('gallery'),
-//            ],
+            [
+                'label' => 'Галерея',
+                'url' => ['/gallery'],
+                'active' => self::checkIsActive('gallery'),
+            ],
             [
                 'label' => 'Статті',
                 'url' => ['/articles'],
