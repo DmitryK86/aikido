@@ -15,7 +15,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <div class="span12">
 
         <div class="row clearfix no-margin">
-            <ul class="gallery-post-grid holder">
+            <ul class="gallery-post-grid holder my-articles-flex">
 
                 <?php foreach ($articles as $article):?>
                    <?= Article::widget(['article' => $article]);?>
