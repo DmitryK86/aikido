@@ -13,15 +13,7 @@ $this->title = Yii::t('app', 'Головна');
     <!-- Slider Carousel
    ================================================== -->
     <div class="span8">
-        <div class="flexslider">
-            <ul class="slides">
-                <li><img src="/img/slider/aiki01.jpg" alt="slider" /></li>
-                <li><img src="/img/slider/aiki02.jpg" alt="slider" /></li>
-                <li><img src="/img/slider/aiki03.jpg" alt="slider" /></li>
-                <li><img src="/img/slider/aiki04.jpg" alt="slider" /></li>
-                <li><img src="/img/slider/aiki05.jpg" alt="slider" /></li>
-            </ul>
-        </div>
+        <img src="/img/main-image.png" alt="slider" />
     </div>
 
     <!-- Headline Text

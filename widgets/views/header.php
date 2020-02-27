@@ -7,24 +7,26 @@ use \yii\helpers\Html;
 use \yii\bootstrap\Nav;
 ?>
 
-<div class="row header"><!-- Begin Header -->
+<div class="row header" style="margin-bottom: 10px"><!-- Begin Header -->
 
     <!-- Logo
     ================================================== -->
     <div class="span5 logo">
         <a href="<?= Url::home();?>"><img src="/img/logo-black.png" alt="Ki-Aikido logo" /></a>
         <h5 title="Ki-Айкідо розуму та тіла"> 心身統一合氣道 </h5>
-    </div>
 
-    <div class="span7 navigation">
+        <div class="span7 navigation navigation-desktop">
         <div class="navbar hidden-phone">
-
             <?= Nav::widget([
                 'items' => \app\widgets\Header::getLinks(),
                 'options' => ['class' => 'nav-pills'],
             ]);?>
-
         </div>
+        </div>
+    </div>
+
+    <div class="span7 navigation">
+
 
         <!-- Mobile Nav
         ================================================== -->

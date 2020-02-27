@@ -3,7 +3,6 @@ html, body {
 	line-height:18px;
 	height: 100%;
  }
-body {background: #f9f9f9 url(../img/page-bg-1.jpg);}
 
 .main-container {
 	min-height: 100%;
@@ -80,7 +79,12 @@ blockquote.pull-right {border-right: 5px solid #999;}
 }
 
 .navigation { margin-top:40px; }
-.navigation .navbar { 
+.navigation-desktop {
+	margin-top:20px;
+	margin-left: 0;
+	display: flex;
+}
+.navigation .navbar {
 	float:right; background:#f8f8f8;
 	border-bottom: 1px dotted #a9a9a9;
 	border-top: 1px dotted #a9a9a9;

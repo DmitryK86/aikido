@@ -19,7 +19,7 @@
                 </address>
                 <ul class="social-icons">
                     <li>
-                        <a href="https://www.facebook.com/people/%D0%92%D0%B8%D1%82%D0%B0%D0%BB%D0%B8%D0%B9-%D0%91%D0%B5%D0%BB%D0%B5%D0%BD%D0%BA%D0%BE/100006671461777" class="social-icon facebook" target="_blank"></a>
+                        <a href="https://www.facebook.com/%D0%A6%D0%B5%D0%BD%D1%82%D1%80-%D1%80%D0%B0%D0%B7%D0%B2%D0%B8%D1%82%D0%B8%D1%8F-%D0%B8-%D0%BE%D0%B1%D1%8A%D0%B5%D0%B4%D0%B8%D0%BD%D0%B5%D0%BD%D0%B8%D1%8F-%D1%81%D0%BE%D0%B7%D0%BD%D0%B0%D0%BD%D0%B8%D1%8F-%D0%B8-%D1%82%D0%B5%D0%BB%D0%B0-1827927597443846/" class="social-icon facebook" target="_blank" rel="nofollow"></a>
                     </li>
                     <li><a href="#" class="social-icon twitter"></a></li>
                     <li><a href="#" class="social-icon dribble"></a></li>

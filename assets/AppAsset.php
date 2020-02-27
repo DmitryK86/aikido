@@ -17,6 +17,8 @@ use yii\web\AssetBundle;
  */
 class AppAsset extends AssetBundle
 {
+    const STATIC_VERSION = 1;
+
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
@@ -39,4 +41,21 @@ class AppAsset extends AssetBundle
         'yii\web\YiiAsset',
         'yii\bootstrap\BootstrapAsset',
     ];
+
+    public function init()
+    {
+        parent::init();
+
+        $this->css = $this->addVersion($this->css);
+        $this->js = $this->addVersion($this->js);
+    }
+
+    private function addVersion(array $sources){
+        $_s = [];
+        foreach ($sources as $source){
+            $_s[] = $source . '?v=' . self::STATIC_VERSION;
+        }
+
+        return $_s;
+    }
 }

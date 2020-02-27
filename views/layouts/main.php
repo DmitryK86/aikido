@@ -37,9 +37,6 @@ $this->registerCssFile("@web/css/style-ie.css",
 
 <body class="home">
 <?php $this->beginBody() ?>
-<!-- Color Bars (above header)-->
-<div class="color-bar-1"></div>
-<div class="color-bar-2 color-bg"></div>
 
     <div class="container">
        <?= \app\widgets\Header::widget();?>
