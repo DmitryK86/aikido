@@ -20,7 +20,8 @@
         "yiisoft/yii2-swiftmailer": "~2.0.0 || ~2.1.0",
         "kartik-v/yii2-widgets": "*",
         "yii-dream-team/yii2-upload-behavior": "1.2.3",
-        "mihaildev/yii2-ckeditor": "*"
+        "mihaildev/yii2-ckeditor": "*",
+        "almasaeed2010/adminlte": "~2.1.1"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.1.0",

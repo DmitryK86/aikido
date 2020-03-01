@@ -16,6 +16,14 @@
     </thead>
     <tbody>
     <tr>
+        <td>Час</td>
+        <td><span class="label label-default"><?= date('H:m d-m-Y'); ?></span></td>
+    </tr>
+    <tr>
+        <td>Ваш IP</td>
+        <td><span class="label label-default"><?php echo Yii::$app->request->getUserIP(); ?></span></td>
+    </tr>
+    <tr>
         <td>Версія CMS</td>
         <td><span class="label label-default"><?php echo Yii::$app->version; ?></span></td>
     </tr>
