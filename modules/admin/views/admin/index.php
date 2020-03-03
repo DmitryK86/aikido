@@ -17,7 +17,7 @@
     <tbody>
     <tr>
         <td>Час</td>
-        <td><span class="label label-default"><?= date('H:m d-m-Y'); ?></span></td>
+        <td><span class="label label-default"><?= date('H:i d-m-Y'); ?></span></td>
     </tr>
     <tr>
         <td>Ваш IP</td>

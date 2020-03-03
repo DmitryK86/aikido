@@ -4,9 +4,11 @@ use yii\bootstrap\Nav;
 use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
 use app\assets\AdminlteAsset;
+use app\assets\AdminAsset;
 /* @var $this \yii\web\View */
 /* @var $content string */
 AdminlteAsset::register($this);
+AdminAsset::register($this)
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>

@@ -40,10 +40,12 @@ $this->registerCssFile("@web/css/style-ie.css",
 
     <div class="container">
        <?= \app\widgets\Header::widget();?>
-       <?= Breadcrumbs::widget([
-           'homeLink' => ['label' => 'Головна', 'url' => \yii\helpers\Url::home()],
-           'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-       ]) ?>
+       <div class="breadcrumbs-custom">
+           <?= Breadcrumbs::widget([
+               'homeLink' => ['label' => 'Головна', 'url' => \yii\helpers\Url::home()],
+               'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
+           ]) ?>
+       </div>
 
        <?= $content ?>
     </div>
