@@ -2,38 +2,42 @@
 /**
  * @var \yii\web\View $this
  */
+$chartData = \app\components\VisitorComponent::getChartData();
 ?>
 
-<div class="admin-default-index">
-    <h1>Управління сайтом</h1>
-</div>
+<div class="box box-success">
+    <div class="box-header with-border">
+        <h3 class="box-title">Количество посещений за последние две недели</h3>
 
-<table class="table">
-    <thead>
-    <tr>
-        <th colspan="2">Дані про систему</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-        <td>Час</td>
-        <td><span class="label label-default"><?= date('H:i d-m-Y'); ?></span></td>
-    </tr>
-    <tr>
-        <td>Ваш IP</td>
-        <td><span class="label label-default"><?php echo Yii::$app->request->getUserIP(); ?></span></td>
-    </tr>
-    <tr>
-        <td>Версія CMS</td>
-        <td><span class="label label-default"><?php echo Yii::$app->version; ?></span></td>
-    </tr>
-    <tr>
-        <td>Версія Yii</td>
-        <td><span class="label label-default"><?php echo Yii::getVersion(); ?></span></td>
-    </tr>
-    <tr>
-        <td>Версія PHP</td>
-        <td><span class="label label-default"><?php echo phpversion(); ?></span></td>
-    </tr>
-    </tbody>
-</table>
+        <div class="box-tools pull-right">
+            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+            </button>
+            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+        </div>
+    </div>
+    <div class="box-body">
+        <?= \dosamigos\chartjs\ChartJs::widget([
+            'type' => 'bar',
+            'options' => [
+                'height' => 100,
+            ],
+            'data' => [
+                'labels' => $chartData['days'],
+                'datasets' => [
+                    [
+                        'label' => "Уникальные пользователи",
+                        'backgroundColor' => "rgba(18,158,224,1)",
+                        'borderColor' => "rgba(255,99,132,1)",
+                        'pointBackgroundColor' => "rgba(255,99,132,1)",
+                        'pointBorderColor' => "#fff",
+                        'pointHoverBackgroundColor' => "#fff",
+                        'pointHoverBorderColor' => "rgba(255,99,132,1)",
+                        'data' => $chartData['visits'],
+                    ]
+                ]
+            ]
+        ]);
+        ?>
+    </div>
+    <!-- /.box-body -->
+</div>
