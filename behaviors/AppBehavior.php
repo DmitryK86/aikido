@@ -34,6 +34,6 @@ class AppBehavior extends Behavior
     }
 
     public function onBeforeRequest(Event $event){
-        (new RedirectRoutesManager())->checkAndREdirect();
+        (new RedirectRoutesManager())->checkAndRedirect();
     }
 }

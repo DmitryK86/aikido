@@ -6,7 +6,7 @@ use yii\helpers\Url;
 
 class RedirectRoutesManager
 {
-    public function checkAndREdirect(){
+    public function checkAndRedirect(){
         $requestedRoute = sprintf('/%s/', trim(\Yii::$app->request->getPathInfo(), '/'));
 
         $redirectModel = RedirectRoutes::findOne(['from_route' => $requestedRoute]);
