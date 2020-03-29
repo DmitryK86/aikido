@@ -91,6 +91,14 @@ $config = [
             ],
         ],
 
+        'assetManager' => [
+            'bundles' => [
+                'dosamigos\chartjs\ChartJsAsset' => [
+                    'sourcePath' => '@vendor/nnnick/chartjs/dist',
+                ],
+            ],
+        ],
+
     ],
     'params' => $params,
 
